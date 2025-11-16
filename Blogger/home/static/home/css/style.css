@@ -1,6 +1,4 @@
-/* ========================================= */
-/* إعدادات عامة */
-/* ========================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +7,7 @@
 
 body {
     background: url("../images/vv.jpg") no-repeat center center fixed;
-    background-size: cover;   /* أهم شيء */
+    background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
     font-family: 'Cairo', sans-serif;
@@ -24,15 +22,13 @@ body {
     padding: 0 20px;
 }
 
-/* ========================================= */
 /* شريط التنقل / الهيدر */
-/* ========================================= */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.13); /* شفاف مع لمسة زجاجية */
+    background: rgba(255, 255, 255, 0.13); 
     backdrop-filter: blur(5px);          /* تأثير الزجاج */
     padding: 15px 0;
     z-index: 1000;
@@ -75,7 +71,7 @@ body {
 }
 
 .nav-link {
-    color: #e1d3b7; /* لون النص */
+    color: #e1d3b7;
     padding: 0.1rem 0.7rem;
     border-radius: 20px;
     font-weight: 700;
@@ -86,14 +82,12 @@ body {
 }
 
 .nav-link:hover {
-    background: #5b6b59; /* بنفسجي غامق عند المرور */
+    background: #5b6b59;
     transform: translateY(-1px);
 }
 
 
-/* ========================================= */
 /* قسم  (Hero)  */
-/* ========================================= */
 .hero-section {
     background: #fff6e184;
     background-size: cover;
@@ -121,7 +115,7 @@ body {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 900;
     margin-bottom: 1.5rem;
-            color: #7e6d52; /* لون أصفر برتقالي */
+            color: #7e6d52;
     text-shadow: 
         0 0 5px #f0bf4b,   /* توهج داخلي */
 
@@ -152,7 +146,7 @@ body {
     line-height: 1.6;
 }
 
-/* زر CTA */
+/* زر  */
 .hero-btn {
     display: inline-block;
     padding: 1rem 3rem;
@@ -178,9 +172,7 @@ body {
     transform: translateY(-1px) scale(1.03);
 }
 
-/* ========================================= */
 /* الأزرار */
-/* ========================================= */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -194,33 +186,30 @@ body {
     cursor: pointer;
     transition: all 0.3s;
     text-decoration: none;
-    margin-bottom: 2rem; /* ← هنا المسافة بين الزر والفوتر */
-
+    margin-bottom: 2rem; 
 }
 
 .btn{
-    background: #5b6b59; /* برتقالي */
+    background: #5b6b59; 
     color: white;
 }
 
 .btn:hover {
     transform: scale(1.05);
-     background: #ffffff; /* برتقالي */
+     background: #ffffff; 
     color: #5b6b59;
 }
 .read-more {
-    color: #7c8662;       /* أصفر برتقالي */
+    color: #7c8662;     
     font-weight: 600;
     text-decoration: none;
 }
 
 .read-more:hover {
-    color: #b5a350;       /* أصفر أكثر سطوع عند المرور */
+    color: #b5a350;   
 }
 
-/* ========================================= */
 /* المنشورات */
-/* ========================================= */
 .posts-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -243,7 +232,7 @@ body {
     font-size: 1.5rem;
     font-weight: 750;
     margin-bottom: 0.5rem;
-    color: #5b6b59; /* بنفسجي */
+    color: #5b6b59; 
 }
 
 .post-meta {
@@ -259,9 +248,9 @@ body {
 .section-title {
     font-size: 1.7rem;
 font-weight: 700;
-    color: #fff1cc; /* بنفسجي */
+    color: #fff1cc; 
     text-shadow: 
-        0 0 5px #efbc47,   /* توهج داخلي */
+        0 0 5px #efbc47,   
 
         0 0 40px #ffeb65;  
 }
@@ -269,7 +258,7 @@ font-weight: 700;
 .section-title i {
     color: #ea9883; /* لون أيقونة النار */
         text-shadow: 
-        0 0 5px #e07c58,   /* توهج داخلي */
+        0 0 5px #e07c58,   
 
         0 0 40px #ffa865;
     font-size: 1.4rem;
@@ -302,9 +291,7 @@ font-weight: 700;
     transform: scale(1.1);
 }
 
-/* ========================================= */
 /* النماذج */
-/* ========================================= */
 .form-container {
     max-width: 650px;
     margin: 2rem auto;
@@ -317,20 +304,20 @@ font-weight: 700;
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2rem;
-        color: #7e6d52; /* لون أصفر برتقالي */
+        color: #7e6d52; 
     text-shadow: 
-        0 0 5px #f0bf4b,   /* توهج داخلي */
+        0 0 5px #f0bf4b,   
 
-        0 0 40px #ffeb65;  /* توهج أوسع */
+        0 0 40px #ffeb65;
 }
 
 .form-group label {
     font-weight: 700;
-            color: #7e6d52; /* لون أصفر برتقالي */
+            color: #7e6d52; 
     text-shadow: 
-        0 0 5px #f0bf4b,   /* توهج داخلي */
+        0 0 5px #f0bf4b,   
 
-        0 0 40px #ffeb65;  /* توهج أوسع */
+        0 0 40px #ffeb65;  
 
     margin-bottom: 0.4rem;
     display: block;
@@ -354,7 +341,7 @@ font-weight: 700;
 
 
 
-/* ====== Posts Grid ====== */
+/*  Posts Grid  */
 .posts-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -364,15 +351,15 @@ font-weight: 700;
 
 .page-header h1 {
     font-size: 40px;
-    color: #fff1cc; /* بنفسجي */
+    color: #fff1cc;
     text-shadow: 
-        0 0 5px #efbc47,   /* توهج داخلي */
+        0 0 5px #efbc47,   
 
-        0 0 40px #ffeb65;  /* توهج أوسع */
+        0 0 40px #ffeb65;  
 }
 
 
-/* ====== Post Card ====== */
+/*  Post Card  */
 .post-item {
     background: #fff6e1dd;
     border-radius: 15px;
@@ -407,7 +394,6 @@ font-weight: 700;
     line-height: 1.6;
 }
 
-/* ====== Empty State ====== */
 .empty-state {
     text-align: center;
     margin: 5rem 0;
@@ -425,7 +411,7 @@ font-weight: 700;
     margin-bottom: 1.5rem;
 }
 
-/* ====== Footer ====== */
+/*  Footer  */
 html, body {
     height: 100%;
 }
@@ -440,7 +426,7 @@ body {
 }
 
 
-/* ====== Responsive ====== */
+/*  Responsive  */
 @media (max-width: 768px) {
     .posts-list {
         grid-template-columns: 1fr;
@@ -459,16 +445,7 @@ body {
 }
 
 
-
-
-
-
-
-
-
-/* ========================================= */
 /* الفوتر */
-/* ========================================= */
 .footer {
     background: rgba(248, 227, 188, 0.084); /* شفافية خفيفة */
     color: white;
