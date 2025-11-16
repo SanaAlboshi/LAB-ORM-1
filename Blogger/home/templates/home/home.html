@@ -1,0 +1,82 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Blogger - Home{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="container hero-content">
+        <h1 class="hero-title">
+            <i class="fas fa-pen-fancy"></i>
+            Welcome to Blogger
+        </h1>
+        <p class="hero-subtitle">
+            Share your thoughts, stories, and ideas with the world.
+        </p>
+        <p class="hero-subtext">
+            Create your own blog, inspire others
+            and let your voice be heard!
+        </p>
+        <a href="{% url 'posts:post_create' %}" class="btn btn-primary hero-btn">
+            <i class="fas fa-plus"></i> Start Writing Now
+        </a>
+    </div>
+</div>
+
+
+<div class="container">
+    <section class="latest-posts">
+        <h2 class="section-title">
+            <i class="fas fa-fire"></i>
+            Latest Posts
+        </h2>
+        
+        {% if latest_posts %}
+        <div class="posts-grid">
+            {% for post in latest_posts %}
+            <article class="post-card">
+                <div class="post-header">
+                    <h3 class="post-title">{{ post.title }}</h3>
+                    <div class="post-meta">
+                        <span class="post-date">
+                            <i class="far fa-calendar-alt"></i>
+                            {{ post.published_at|date:"Y/m/d" }}
+                        </span>
+                        <span class="post-time">
+                            <i class="far fa-clock"></i>
+                            {{ post.published_at|date:"H:i" }}
+                        </span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>{{ post.content|truncatewords:30 }}</p>
+                </div>
+                <div class="post-footer">  
+                   <a href="{% url 'posts:post_list' %}" class="read-more">
+                     Read More 
+                   </a>
+                 
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center" style="margin-top: 2rem;">
+            <a href="{% url 'posts:post_list' %}" class="btn btn-secondary">
+                View All Posts <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <i class="fas fa-inbox"></i>
+            <p>No posts available yet</p>
+            <a href="{% url 'posts:post_create' %}" class="btn btn-primary">
+                Add Your First Post
+            </a>
+        </div>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}
