@@ -6,17 +6,5 @@ class Post(models.Model):
     content = models.TextField(verbose_name='Content')
     is_published = models.BooleanField(default=True, verbose_name='Published')
     published_at = models.DateTimeField(default=timezone.now, verbose_name='Published Date')
+    poster = models.ImageField(upload_to="images/", default="images/default.jpg")  
     
-    class Meta:
-        ordering = ['-published_at']
-        verbose_name = 'Post'
-        verbose_name_plural = 'Posts'
-    
-    def __str__(self):
-        return self.title
-
-
-
-
-
-

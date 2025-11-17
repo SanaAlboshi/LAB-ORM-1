@@ -1,4 +1,5 @@
 {% extends 'home/base.html' %}
+{% load static %}
 
 {% block title %}All Posts - Blogger{% endblock %}
 
@@ -18,6 +19,13 @@
     <div class="posts-list">
         {% for post in posts %}
         <article class="post-item">
+            {% if post.poster %}
+                <div class="post-image" style="margin-bottom: 15px;">
+                    <img src="{{ post.poster.url }}" alt="{{ post.title }}" 
+                         style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 8px;">
+                </div>
+            {% endif %}
+
             <div class="post-item-header">
                 <h2 class="post-item-title">{{ post.title }}</h2>
                 <div class="post-item-meta">
@@ -31,9 +39,21 @@
                     </span>
                 </div>
             </div>
+
             <div class="post-item-content">
                 {{ post.content|linebreaks }}
             </div>
+
+          <div style="margin-top: 1rem;">
+    <a href="{% url 'posts:post_delete' post.pk %}" class="btn" style="background: #b67178; color: white;">
+        <i class="fas fa-trash"></i> Delete
+    </a>
+
+    <a href="{% url 'posts:post_edit' post.pk %}" class="btn btn-primary" style="background: #9fac87; color: white;">
+        <i class="fas fa-edit"></i> Edit
+    </a>
+</div>
+
         </article>
         {% endfor %}
     </div>
@@ -45,7 +65,7 @@
             Add First Post
         </a>
     </div>
+
     {% endif %}
 </div>
-
 {% endblock %}

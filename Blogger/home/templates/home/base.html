@@ -17,6 +17,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
     
+
+
     {% block extra_css %}{% endblock %}
 </head>
 <body>
@@ -25,6 +27,8 @@
         <div class="container">
             <div class="nav-content">
                 <a href="{% url 'home:home' %}" class="nav-brand">
+
+
                     <div class="brand-icon">
                         <i class="fas fa-feather-alt"></i>
                     </div>
@@ -33,6 +37,8 @@
                 
                 <ul class="nav-menu">
                     <li>
+                        <a class="nav-link" href="{% url 'games:'}">new game</a>
+                        <ul class="nav-menu">
                         <a href="{% url 'home:home' %}" class="nav-link">
                             <i class="fas fa-home"></i>
                             <span>Home</span>
