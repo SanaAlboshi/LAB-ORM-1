@@ -114,12 +114,11 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 900;
-    margin-bottom: 1.5rem;
-            color: #7e6d52;
+    margin-bottom: 1.6rem;
+            color: #4f4337;;
     text-shadow: 
-        0 0 5px #f0bf4b,   /* توهج داخلي */
-
-        0 0 40px #ffeb65;   /* توهج أوسع */
+        0 0 5px #ffbf66,   /* توهج داخلي */
+        0 0 40px z#ffc465;   /* توهج أوسع */
     line-height: 1;
     letter-spacing: -1px;
 }
@@ -130,17 +129,17 @@ body {
     margin-bottom: 1rem;
     color: #ffeec8;
     text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.92);
-
     font-weight: 600;
     letter-spacing: 0.5px;
 }
 
 /* النص الإضافي */
 .hero-subtext {
+    
     font-size: 2rem;
     margin-bottom: 2.5rem;
-    color: #695845;
-    max-width: 700px;
+    color: #4f453a;
+    max-width: 700;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
